@@ -1,0 +1,11 @@
+.next/
+node_modules/
+.env.local
+.env.production
+out/
+build/
+*.tsbuildinfo
+
+.DS_Store
+.idea/
+.vercel/

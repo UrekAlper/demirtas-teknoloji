@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-amber:       #F5A800;
+  --color-amber-dark:  #C98A00;
+  --color-amber-light: #FFC533;
+  --color-charcoal:    #2D2D2D;
+  --color-dark-bg:     #1A1A1A;
+  --color-white:       #FFFFFF;
+  --color-gray-mid:    #6B6B6B;
+  --color-gray-light:  #F4F4F4;
+  --color-border:      #E0E0E0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), sans-serif;
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Metal mesh overlay utility */
+.mesh-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Amber left bar utility */
+.amber-left-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-amber);
+}
